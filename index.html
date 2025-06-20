@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">A</div>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showSectionView('latest'); return false;">Latest</a></li>
+                        <li><a href="#" onclick="showSectionView('world'); return false;">World</a></li>
+                        <li><a href="#" onclick="showSectionView('events'); return false;">Events</a></li>
+                        <li><a href="#" onclick="showSectionView('financial'); return false;">Finance</a></li>
+                    </ul>
+                </nav>
+                <div class="search-icon" onclick="toggleSearch()"><i class="fas fa-search"></i></div>
+                <div class="search-bar" id="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search articles...">
+                    <button onclick="search()">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main id="main-content" class="main-content">
+            <div class="feature-article" id="feature-article">
+                <div class="feature-image-container"></div>
+                <div class="feature-text">
+                    <h1>Loading...</h1>
+                    <div class="date">Loading...</div>
+                    <p>Loading...</p>
+                </div>
+            </div>
+            <aside class="latest-section" id="latest-section">
+                <h3>Latest<span class="section-arrow"></span></h3>
+            </aside>
+        </main>
+
+        <div class="lower-sections">
+            <section class="world-section" id="world">
+                <h2>World<span class="section-arrow"></span></h2>
+            </section>
+            <section class="events-section" id="events">
+                <h2>Events<span class="section-arrow"></span></h2>
+            </section>
+        </div>
+
+        <section class="financial-section" id="financial">
+            <h2>Financee<span class="section-arrow"></span></h2>
+            <div class="finance-content">
+                <div class="finance-feature-article" id="finance-feature-article">
+                    <div class="finance-feature-image-container"></div>
+                    <div class="finance-feature-text">
+                        <h1>Loading...</h1>
+                        <div class="date">Loading...</div>
+                        <p>Loading...</p>
+                    </div>
+                </div>
+                <aside class="finance-latest-section" id="finance-latest-section">
+                    <h3>Latest<span class="section-arrow"></span></h3>
+                </aside>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 News Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
